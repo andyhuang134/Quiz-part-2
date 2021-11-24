@@ -92,7 +92,6 @@ function displayAnswers() {
   }
   debounce = true;
 }
-function bob() {}
 
 function submit() {
   let pointsArray = [
