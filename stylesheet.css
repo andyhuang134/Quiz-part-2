@@ -11,3 +11,17 @@ body {
 #display_message {
   color: aquamarine;
 }
+
+#submit {
+  width: 100%;
+  height: 50px;
+  font-size: large;
+}
+
+#q3_i {
+  color: coral;
+}
+
+.correct_answers {
+  color: gold;
+}

@@ -1,7 +1,11 @@
+let debounce = false;
+
 function checkQuestion1() {
   let rightAnswer = document.getElementById("aphelios");
   if (rightAnswer.checked == true) {
     console.log("[question 1] correct.");
+    document.getElementById("q1_mark").innerHTML =
+      "Which of these champions cost 6300 BE? (1/1)";
     return 1;
   } else {
     console.log("[question 1] wrong.");
@@ -23,6 +27,9 @@ function checkQuestion2() {
       rightAnswersCounter--;
     }
   }
+  document.getElementById(
+    "q2_mark"
+  ).innerHTML = `Which of these <i>DO NOT</i> give hp? (${rightAnswersCounter}/2)`;
   console.log(`[question 2] ${rightAnswersCounter} correct.`);
   return rightAnswersCounter;
 }
@@ -32,6 +39,8 @@ function checkQuestion3() {
   let userAnswer = document.getElementById("q3").value;
   if (userAnswer == rightAnswer) {
     console.log("[question 3] correct.");
+    document.getElementById("q3_mark").innerHTML =
+      "What version of minecraft was the nether update added? (1/1)";
     return 1;
   } else {
     console.log("[question 3] wrong.");
@@ -43,7 +52,9 @@ function checkQuestion4() {
   const rightAnswer = "coalossal";
   let userAnswer = document.getElementById("q4").value;
   if (userAnswer == rightAnswer) {
+    document.getElementById("q4_mark").innerHTML = "Whos that pokemon? (1/1)";
     console.log("[question 4] correct.");
+
     return 1;
   } else {
     console.log("[question 4] wrong.");
@@ -58,19 +69,29 @@ function displayPoints() {
 
 function displayMessage() {
   let totalPoints = submit();
-  if ((totalPoints == 1, 2)) {
+  if (totalPoints == 0 || totalPoints == 1) {
     document.getElementById("display_message").innerHTML = "YOU SUCK!";
   }
-  if ((totalPoints == 3, 4)) {
+  if (totalPoints == 2 || totalPoints == 3) {
     document.getElementById("display_message").innerHTML = "EHHH";
   }
-  if (totalPoints == 5) {
+  if (totalPoints == 4 || totalPoints == 5) {
     document.getElementById("display_message").innerHTML =
       "ABOVE AVERAGE I GUESS";
   }
 }
 
-function displayAnswers() {}
+function displayAnswers() {
+  if (debounce == false) {
+    document.getElementById("q1_answer").innerText = "Correct Answer: Aphelios";
+    document.getElementById("q2_answer").innerText =
+      "Correct Answer: Death Dance and Essence Reaver";
+    document.getElementById("q3_answer").innerText = "Correct Answer: 1.16";
+    document.getElementById("q4_answer").innerText =
+      "Correct Answer: coalossal";
+  }
+  debounce = true;
+}
 
 function submit() {
   let pointsArray = [
