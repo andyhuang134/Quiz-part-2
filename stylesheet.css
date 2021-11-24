@@ -1,0 +1,13 @@
+body {
+  font-family: "M PLUS 1", sans-serif;
+  background-color: #12046c;
+  color: aliceblue;
+}
+
+#total_marks {
+  color: aquamarine;
+}
+
+#display_message {
+  color: aquamarine;
+}

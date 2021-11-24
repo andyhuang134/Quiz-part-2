@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quiz Part 2</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <div class="main">
+
+    <center>
+      <h1>Quiz part 2</h1>
+      <h2 id="total_marks">_/5 MARKS</h2>
+      <h2 id="display_message"></h2>
+    </center>
+
+
+    <div id="question_1">
+      <div>
+        <h3>Which of these champions cost 6300 BE? (1 MARK)</h3>
+        <img src="assets/AlistarSquare.png">
+        <img src="assets/Aphelios_OriginalSquare.png">
+        <img src="assets/AsheSquare.png">
+        <img src="assets/Master_YiSquare.png">
+        <br>
+      </div>
+
+      <div>
+        <input type="radio" name="q1" id="ashe">
+        <label>Ashe</label>
+        <br>
+        <input type="radio" name="q1" id="alistar">
+        <label>Alistar</label>
+        <br>
+        <input type="radio" name="q1" id="master_yi">
+        <label>Master Yi</label>
+        <br>
+        <input type="radio" name="q1" id="aphelios">
+        <label>Aphelios</label>
+        <br>
+      </div>
+    </div>
+
+
+    <div id="question_2">
+      <div>
+        <h3>Which of these <i>DO NOT</i> give hp? (2 MARKS)</h3>
+        <img src="assets/Black_Cleaver_item.png">
+        <img src="assets/Death_Dance_item.png">
+        <img src="assets/Divine_Sunderer_item.png">
+        <img src="assets/Essence_Reaver_item.png">
+        <br>
+      </div>
+
+      <div>
+        <input type="checkbox" class="q2_wrong_answers" name="q2" id="black_cleaver">
+        <label>Black Cleaver</label>
+        <br>
+        <input type="checkbox" class="q2_right_answers" name="q2" id="death_dance">
+        <label>Death Dance</label>
+        <br>
+        <input type="checkbox" class="q2_wrong_answers" name="q2" id="divine_sunderer">
+        <label>Divine Sunderer</label>
+        <br>
+        <input type="checkbox" class="q2_right_answers" name="q2" id="essence_reaver">
+        <label>Essence Reaver</label>
+        <br>
+      </div>
+    </div>
+
+
+    <div id="question_3">
+      <h3>What version of minecraft was the nether update added? (1 MARK)</h3>
+      <img src="assets/nether_header.jpg" width="600" height="350">
+      <br>
+      <input type="text" name="minecraft" id="q3">
+      <br>
+    </div>
+
+
+    <div id="question_4">
+      <h3>Whos that pokemon? (1 MARK)</h3>
+      <img src="assets/Coalossal.png">
+      <br>
+      <input type="text" name="pokemon" id="q4">
+      <br>
+    </div>
+  </div>
+  <button type="button" id="submit" onclick="main()">Submit</button>
+  <br>
+  <br>
+  <br>
+  <div id="javascripts">
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
